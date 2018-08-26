@@ -12,7 +12,7 @@ yarn add lazy-loader-puge
 ```
 <template lang="pug">
   .panel-item
-    LazyLoader.lazy(:url="'./static/assets/thumbnails/' + chartData.id + '.png'")
+    LazyLoader.lazy
       img(:src="'./static/assets/thumbnails/' + chartData.id + '.png'")
 </template>
 

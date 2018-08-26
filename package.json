@@ -1,6 +1,6 @@
 {
   "name": "lazy-loader-puge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "懒加载组件",
   "author": "PUGE <my@owo.help>",
   "private": false,

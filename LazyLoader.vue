@@ -1,28 +1,28 @@
 <template>
-  <div class="lazy-loader">
-    <slot v-if="isShow"></slot>
+  <div v-if="isShow" class="lazy-loader">
+    <slot></slot>
   </div>
 </template>
 
 <script>
-let io = null
 export default {
   data () {
     return {
+      io: null,
       isShow: ''
     }
   },
   mounted () {
-    io = new IntersectionObserver(entries => {
+    this.io = new IntersectionObserver(entries => {
       if (entries[0].isIntersecting) {
         this.isShow = true
       }
     })
-    io.observe(this.$el)
+    this.io.observe(this.$el)
   },
   beforeDestroy () {
     // 关闭观察器
-    io.disconnect()
+    this.io.disconnect()
   }
 }
 </script>
