@@ -1,6 +1,7 @@
 <template>
-  <div v-if="isShow" class="lazy-loader">
-    <slot></slot>
+  <div class="lazy-loader">
+    <!-- v-if只能放到第二级 -->
+    <slot v-if="isShow"></slot>
   </div>
 </template>
 
